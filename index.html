@@ -35,6 +35,7 @@
         email: email
     };
 
+    
     firebase.database().ref('subscription-entries').push().set(emailObject)
         .then(function(snapshot) {
             success(); // some success method
@@ -43,7 +44,7 @@
             error(); // some error method
         });
 }
-
+alert(email);
 saveToFirebase(email);
 </script>
 </body>
