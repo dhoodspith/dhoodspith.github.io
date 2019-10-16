@@ -5,47 +5,7 @@
 <p>Hi team!!! :) </p>
 <h1>Step 2 - Get to redirect the URL</h1>
 <p>This is a page dedicated to taking ideas and generating revenue from them.  You want your money to appear as a cheque, hence the term mailbox money.</p>
-<h1>Step 3 - Setup a DB so we can log a question to a database</h1>
+<h1>Step 3 - Setup a email so we can log a question</h1>
 <p>Fingers Crossed!!!</p>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCCL3LClkdsN55RffPaia4SFJvbFUdUdpU",
-    authDomain: "mailboxmoneypodcast.firebaseapp.com",
-    databaseURL: "https://mailboxmoneypodcast.firebaseio.com",
-    projectId: "mailboxmoneypodcast",
-    storageBucket: "mailboxmoneypodcast.appspot.com",
-    messagingSenderId: "370063564249",
-    appId: "1:370063564249:web:f223871b2184f4bc8a4dc8",
-    measurementId: "G-0VZ3GS94XF"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  function saveToFirebase(email) {
-    var emailObject = {
-        email: email
-    };
-
-    
-    firebase.database().ref('subscription-entries').push().set(emailObject)
-        .then(function(snapshot) {
-            success(); // some success method
-        }, function(error) {
-            console.log('error' + error);
-            error(); // some error method
-        });
-}
-alert(email);
-saveToFirebase(email);
-</script>
 </body>
 </html>
